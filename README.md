@@ -1,14 +1,10 @@
 # Object Movement Detection with Graph Neural Networks
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.7.0-red.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-
-## 📋 Project Overview
+## Project Overview
 
 This project implements a **Graph Neural Network (GNN)**-based deep learning model for detecting object movement in 3D environments. The model leverages multiple modalities including depth images, surface normal vectors, and object contour information to predict whether objects have moved over time.
 
-### 🎯 Key Features
+### Key Features
 
 - **Multi-modal Input**: Fusion of depth, normal, and contour information
 - **GNN Architecture**: Modeling spatial relationships between objects
@@ -16,7 +12,7 @@ This project implements a **Graph Neural Network (GNN)**-based deep learning mod
 - **Robust Features**: Generalized model that doesn't rely on pose, size, or class ID
 - **End-to-End Solution**: Complete pipeline from preprocessing to post-processing
 
-### 🔬 Technology Stack
+### Technology Stack
 
 - **Deep Learning Framework**: PyTorch 2.7.0, PyTorch Geometric
 - **Computer Vision**: OpenCV, torchvision
@@ -25,7 +21,7 @@ This project implements a **Graph Neural Network (GNN)**-based deep learning mod
 - **Visualization**: Matplotlib
 - **Machine Learning**: scikit-learn
 
-## 🏗️ Model Architecture
+## 🏗Model Architecture
 
 ### 1. CNN Backbone (`depth_normal_backbone.py`)
 
@@ -56,30 +52,30 @@ Object Features → Node Feature Constructor
 3. **Visual Features**: RoI features extracted from CNN
 4. **Normalization**: Scale normalization using fixed reference points
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 gnn_model/
-├── 📜 train_data.py              # Main training script
-├── 📜 data_training.py           # Dataset and trainer classes
-├── 📜 improved_baseline_model.py # GNN model architecture
-├── 📜 depth_normal_backbone.py   # CNN backbone (Depth+Normal)
-├── 📜 inference_data.py          # Inference script
-├── 📜 test_data.py              # Model evaluation script
-├── 📜 requirements.txt          # Python dependencies
-├── 📜 install_requirements.sh   # Installation script
-└── 📁 example_datasets/         # Example data
-    ├── 📜 camera_info.json      # Camera configuration
-    └── 📁 episode_0/           # Episode data
-        ├── 📁 action_metadata/  # Movement label data
-        ├── 📁 camera_info/      # Camera bounding boxes
-        ├── 📁 contour/          # Object contour data
-        ├── 📁 depth/            # Depth images (.png)
-        ├── 📁 image_data/       # RGB camera images
-        └── 📁 normal/           # Surface normal data (.bin)
+├── train_data.py              # Main training script
+├── data_training.py           # Dataset and trainer classes
+├── improved_baseline_model.py # GNN model architecture
+├── depth_normal_backbone.py   # CNN backbone (Depth+Normal)
+├── inference_data.py          # Inference script
+├── test_data.py              # Model evaluation script
+├── requirements.txt          # Python dependencies
+├── install_requirements.sh   # Installation script
+└── example_datasets/         # Example data
+    ├── camera_info.json      # Camera configuration
+    └── episode_0/           # Episode data
+        ├── action_metadata/  # Movement label data
+        ├── camera_info/      # Camera bounding boxes
+        ├── contour/          # Object contour data
+        ├── depth/            # Depth images (.png)
+        ├── image_data/       # RGB camera images
+        └── normal/           # Surface normal data (.bin)
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Environment Setup
 
@@ -214,7 +210,7 @@ model_config = {
 - **Not Moved (Class 0)**: Weight 1.0
 - **Moved (Class 1)**: Weight 5.0 (to handle class imbalance)
 
-## 📈 Performance Metrics
+## Performance Metrics
 
 The model is evaluated using the following metrics:
 
