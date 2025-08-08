@@ -186,7 +186,7 @@ python inference_data.py \
 }
 ```
 
-## ⚙️ Model Configuration
+## Model Configuration
 
 ### Hyperparameters
 
