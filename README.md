@@ -21,7 +21,7 @@ This project implements a **Graph Neural Network (GNN)**-based deep learning mod
 - **Visualization**: Matplotlib
 - **Machine Learning**: scikit-learn
 
-## 🏗Model Architecture
+## Model Architecture
 
 ### 1. CNN Backbone (`depth_normal_backbone.py`)
 
