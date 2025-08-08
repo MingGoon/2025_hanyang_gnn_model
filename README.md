@@ -142,7 +142,7 @@ python inference_data.py \
     --output_dir ./predictions
 ```
 
-## 📊 Data Format
+## Data Format
 
 ### Action Metadata (JSON)
 ```json
